@@ -1,0 +1,35 @@
+.player-container {
+    padding: 2rem;
+    z-index: -1;
+    width: 100%;
+    min-height: 100vh;
+    background: var(--clr-black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+}
+.player-youtube {
+    position: relative;
+    width: 80%;
+    /* pointer-events: none; */
+
+}
+.player-soundcloud {
+    position: relative;
+    width: 80%;
+    /* pointer-events: none; */
+
+}
+.controlsWrapper {
+    display: flex;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.controls-grid h3 {
+    text-transform: uppercase;
+    color: var(--clr-white);
+}
