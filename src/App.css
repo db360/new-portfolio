@@ -5,7 +5,10 @@
     font-family: 'Poppins', sans-serif;
     /* color: var(--clr-white); */
   }
+body {
+  overscroll-behavior-y: none;
 
+}
   img,picture {
     max-width: 100%;
   }
@@ -20,4 +23,13 @@
     --clr-glass-dark:39,47%, 89%, 0.110;
     --clr-glass-font:39,47%, 89%, 0.210;
     --clr-glass-blank:0, 0%, 0%,0.062;
+  }
+
+  .App {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
   }

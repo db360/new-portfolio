@@ -1,5 +1,9 @@
+import React, { useEffect, useRef } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+
+//windowSize Hook
+import useWindowSize from "./hooks/useWindowsSize";
 
 //Components 👇
 import Header from "./components/Header";
@@ -10,23 +14,68 @@ import Contact from "./components/Contact";
 import Player from "./components/Player";
 
 function App() {
+  //Hook
+  const size = useWindowSize();
+  //REF
+  const app = useRef();
+  const scrollContainer = useRef();
+
+  const skewConfigs = {
+    ease: .1,
+    current: 0,
+    previous: 0,
+    rounded: 0
+  }
+
+  useEffect(() => {
+    // console.log(size.height)
+    document.body.style.height = `${
+      scrollContainer.current.getBoundingClientRect().height
+    }px`;
+  }, [size.height]);
+
+  useEffect(() => {
+    requestAnimationFrame(() => skewScrolling());
+  }, [])
+
+  const skewScrolling = () => {
+    skewConfigs.current = window.scrollY;
+    skewConfigs.previous += (skewConfigs.current - skewConfigs.previous) * skewConfigs.ease;
+    skewConfigs.rounded = Math.round(skewConfigs.previous * 100) / 100;
+
+    // Variables for acceleration and velocity
+    const difference = skewConfigs.current - skewConfigs.rounded;
+    const acceleration = difference / size.width
+    const velocity = + acceleration;
+    const skew = velocity * 7.5;
+
+    //
+    scrollContainer.current.style.transform = `translate3d(0, -${skewConfigs.rounded}px, 0)`;
+
+    requestAnimationFrame(() => skewScrolling())
+
+
+  }
+
   return (
-    <div className="App">
-      <Header />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Section />
-              <Info />
-              <Test />
-              <Player />
-            </>
-          }
-        />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+    <div ref={app} className="App">
+      <div style={{}} ref={scrollContainer} className="scroll">
+        <Header />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Section />
+                <Info />
+                <Test />
+                <Player />
+              </>
+            }
+          />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
     </div>
   );
 }

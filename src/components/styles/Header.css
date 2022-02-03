@@ -6,11 +6,16 @@
     position: absolute;
     padding: .4rem;
 }
-.logo span {
-    text-transform: uppercase;
-    font-size: clamp(1rem, 3vw + 1rem, 5rem);
-    color: hsl(var(--clr-glass-dark));
-    font-weight: 900;
+.logo img {
+   height: 4rem;
+   cursor: pointer;
+   filter: grayscale(70%);
+}
+.logo img:hover {
+    transform: scale(1.2);
+    transition: transform .2s ease-in-out;
+    animation-duration: 500ms;
+
 }
 .list-items {
     display: flex;

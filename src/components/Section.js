@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import Modal from './Modal';
 import './styles/Section.css'
 
+import { motion } from 'framer-motion';
+
 const Section = () => {
   const [modalActive, setModalActive] = useState(false);
 
@@ -14,7 +16,7 @@ const Section = () => {
 
           <div>
             <h1 className='main-header'>My Name is <span>David Martínez</span></h1>
-            <p className='main-status'>Lorem ipsum dolor sit amet consectetur adipisicing elit. In saepe repellat magni! Minus ipsa sequi distinctio asperiores cum pariatur magni, enim laboriosam est perspiciatis a? Veniam laudantium perspiciatis nostrum dicta.</p>
+            <p className='main-status'>I am a Sound Tech who loves Music and Technology, i've been playing with hardware since I was a kid, lately with 3D design and animation, and now I've found that i can blend all my passions together trought Web Development.</p>
             <div className="main-btn">
               <Link onClick={showModal} to="/">See My Works</Link>
             </div>

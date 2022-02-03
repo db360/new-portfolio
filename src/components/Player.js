@@ -7,6 +7,7 @@ const Player = () => {
     <div className="player-container">
       <div className="player-youtube">
         <ReactPlayer
+          allow="autoplay"
           width={"100%"}
           height={"35rem"}
           muted={true}

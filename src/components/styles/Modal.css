@@ -1,4 +1,5 @@
 .modal {
+    height: 100vh;
     display: -ms-grid;
     display: grid;
     -ms-grid-column: 1;
@@ -6,11 +7,13 @@
     background: hsl(var(--clr-glass-dark));
     -webkit-backdrop-filter: blur(1rem);
     backdrop-filter: blur(1rem);
-    position: fixed;
+    position: absolute;
     place-content: center;
     inset: 20%;
     gap: 1rem;
     padding: 1rem;
+    top:0;
+
 }
 
 .cart {
