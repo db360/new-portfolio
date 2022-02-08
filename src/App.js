@@ -12,6 +12,7 @@ import Section from "./components/Section";
 import Test from "./components/Testimonials";
 import Contact from "./components/Contact";
 import Player from "./components/Player";
+import Projects from "./components/Projects";
 
 function App() {
   //Hook
@@ -73,6 +74,7 @@ function App() {
               </>
             }
           />
+          <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>

@@ -1,0 +1,8 @@
+.grid-container {
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(16,16,20,1) 60%, rgb(102, 102, 102) 90%);
+    width: 100%;
+    height: 100vh;
+    margin-top: 50rem;
+    color: white;
+    margin: 0;
+}
