@@ -5,6 +5,7 @@ import './styles/Contact.css';
 
 const Contact = () => {
     return (
+        <>
         <div className='contact'>
             <h1>Contact</h1>
             <input type="text" placeholder='Name'/>
@@ -12,6 +13,7 @@ const Contact = () => {
             <input type="text" placeholder='Message' className='input-msg'/>
             <Link to='/'>Send</Link>
         </div>
+        </>
     );
 };
 

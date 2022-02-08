@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import "./styles/Header.css";
-import logo from "../components/assets/logo-dab.png";
+import logo from "../components/assets/images/logo-dab.png";
 
 import { Close, MenuOutlined } from "@material-ui/icons";
 
