@@ -55,5 +55,26 @@ h1 {
 }
 
 
+@media (max-width: 50em) {
+    .projects-container {
+        /* width: 100%; */
+        height: 100vh;
+        background: var(--clr-black);
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        flex-direction: column;
+    }
 
+    .projects-container .cont-titulo {
+        padding-top: 5rem;
+
+    }
+
+    .carousel-slider {
+        width: 80% !important;
+        max-width: 90%;
+
+    }
+}
 

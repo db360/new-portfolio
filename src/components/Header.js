@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import { motion } from "framer-motion";
 
@@ -50,16 +50,31 @@ const Header = () => {
           </div>
           {/* <li><Link to='/works'>Works</Link></li> */}
           <li>
-            <Link to="/about">About</Link>
+            <NavLink  to="/" className={({ isActive }) =>
+              isActive ? 'active' : undefined
+            }
+          >Home</NavLink>
           </li>
           <li>
-            <Link to="/projects">Projects</Link>
+            <NavLink  to="/about" className={({ isActive }) =>
+              isActive ? 'active' : undefined
+            }
+          >About</NavLink>
           </li>
           <li>
-            <Link to="/music">Music</Link>
+            <NavLink to="/projects" className={({ isActive }) =>
+              isActive ? 'active' : undefined
+            }>Projects</NavLink>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <NavLink to="/music" className={({ isActive }) =>
+              isActive ? 'active' : undefined
+            }>Music</NavLink>
+          </li>
+          <li>
+            <NavLink to="/contact" className={({ isActive }) =>
+              isActive ? 'active' : undefined
+            }>Contact</NavLink>
           </li>
         </ul>
       </nav>

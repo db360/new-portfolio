@@ -1,8 +1,8 @@
 import { v4 as uuidv4 } from 'uuid';
-import CalendarApp from '../images/calendar-app-pic.png';
-import HuluClon from '../images/hulu-clon.png';
-import LandingPage from '../images/Next.js-landing.png';
-import BlogCafe from '../images/Blog-Cafe.png';
+import CalendarApp from '../assets/images/calendar-app-pic.png';
+import HuluClon from '../assets/images/hulu-clon.png';
+import LandingPage from '../assets/images/Next.js-landing.png';
+import BlogCafe from '../assets/images/Blog-Cafe.png';
 
 const projects = [
   {

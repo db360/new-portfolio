@@ -14,7 +14,7 @@
 }
 .logo img:hover {
     transform: scale(1.2);
-    transition: transform .2s ease-in-out;
+    transition: transform .1 ease-in-out;
     animation-duration: 500ms;
 
 }
@@ -28,7 +28,9 @@
     text-decoration: none;
     color: hsl(var(--clr-glass));
     font-size: clamp(0.5rem,0.5vw + 0.5rem,3.5rem);
-
+}
+.list-items li a.active {
+    color: var(--clr-white);
 }
 .list-items li a:hover , .list-items li a:focus {
     color: var(--clr-white);

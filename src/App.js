@@ -34,11 +34,11 @@ function App() {
     document.body.style.height = `${
       scrollContainer.current.getBoundingClientRect().height
     }px`;
-  }, [size.height, location]);
+  }, [size.height, location.pathname]);
 
   useEffect(() => {
     requestAnimationFrame(() => skewScrolling());
-  }, []);
+  }, [location.pathname]);
 
   const skewScrolling = () => {
     skewConfigs.current = window.scrollY;

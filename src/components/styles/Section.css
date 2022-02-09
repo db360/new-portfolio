@@ -1,6 +1,6 @@
 .section {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     background: linear-gradient(58deg,rgba(0, 0, 0, 0.700),rgba(0, 0, 0, 0.308 )),url(../assets/images/dab-comic-right.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -41,8 +41,25 @@
 .main-btn a:hover {
     color: var(--clr-glass);
 }
+
+.icons {
+    position: absolute;
+    transform: translateY(-3.5rem);
+    margin-left: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.icons a{
+    color: black;
+}
+
 @media (max-width: 900px) {
     .section {
         justify-content: center;
     }
+}
+
+@media (max-width: 50em) {
+    
 }
