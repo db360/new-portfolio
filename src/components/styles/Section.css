@@ -54,6 +54,13 @@
     color: black;
 }
 
+.icons a:hover {
+    color: rgb(116, 116, 116);
+    transform: scale(1.5);
+    transition: all ease-in-out;
+    transition-duration: 0.2s;
+}
+
 @media (max-width: 900px) {
     .section {
         justify-content: center;
@@ -61,5 +68,5 @@
 }
 
 @media (max-width: 50em) {
-    
+
 }

@@ -28,8 +28,8 @@ const Player = () => {
 
       <div className="player-soundcloud">
         <ReactPlayer
-          width={"100%"}
-          height={"20%"}
+          width={"500px"}
+          height={"100px"}
           url="https://soundcloud.com/dab360/miamargo-scotty-dk-password-dab-omar-massri-rmx"
         />
       </div>

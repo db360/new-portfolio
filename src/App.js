@@ -13,6 +13,7 @@ import Test from "./components/Testimonials";
 import Contact from "./components/Contact";
 import Player from "./components/Player";
 import Projects from "./components/Projects";
+import About from "./components/About";
 
 function App() {
 
@@ -87,7 +88,15 @@ function App() {
             path="/projects"
             element={
               <>
-                <Projects />
+                <Projects scrollContainer={scrollContainer}/>
+              </>
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <>
+                <About/>
               </>
             }
           />

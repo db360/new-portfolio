@@ -2,12 +2,12 @@
     padding: 2rem;
     z-index: -1;
     width: 100%;
-    min-height: 100vh;
     background: var(--clr-black);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4rem;
+    gap: 2rem;
+    height: 100vh;
 }
 .player-youtube {
     position: relative;
